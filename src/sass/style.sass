@@ -1,0 +1,217 @@
+// ======================================================================== //
+// Создаем хранилище базовых цветов оформления через переменные
+:root
+    --black-color: #263238
+    --base-color: #baef00
+    --base-color-hover:#D9FF56
+    --base-color-active: #a3d200
+    --border-color: #e3e3e3
+    --placeholder-color: #8D8D8D
+    --transition-duration: .3s
+
+    // Зададим бордер-бокс для всех элементов страницы, чтобы все паддинги работали корректно
+*
+    box-sizing: border-box 
+
+// Зададим стили для всех псевдо-элементов используемых в нашей верстке
+*,
+::after,
+::before
+    box-sizing: inherit 
+
+// Стилизуем контент внутри body в части текста
+body
+    font-size: 16px
+    font-family: Arial, Helvetica, sans-serif
+    margin: 0
+    color: var(--black-color)
+    background-color: grey
+
+// Стилизуем изображения
+img
+    max-width: 100%
+
+// Стилизуем ссылки (отключим нижнее подчеркивание)
+a 
+    text-decoration: none 
+
+// ======================================================================== //
+
+
+// ======================== 1 Компонент - ССЫЛКА ======================= //
+
+// -------> ссылка-дефолт <------- //
+.default-link
+    color: var(--black-color)
+    font-weight: 400
+    font-size: 20px
+    text-decoration: underline
+    transition: color var(--transition-duration), background-color var(--transition-duration)
+
+// -------> ссылка-фокус <------- //
+.default-link:focus-visible
+    outline: none
+    background-color: var(--base-color)
+
+// -------> ссылка-ховер <------- //
+.default-link:hover
+    color: var(--base-color-hover)
+
+// -------> ссылка-актив <------- //
+.default-link:active
+    color: var(--base-color-active)
+
+
+// ======================== 2 Компонент - КНОПКА ======================= //
+
+// -------> Кнопка-дефолт <------- //
+.default-btn
+    display: inline-block
+    padding: 11px 47px
+    border: none
+    border-radius: 12px
+    color: var(--black-color)
+    background: var(--base-color)
+    font-weight: 400
+    outline: 1px solid transparent 
+    // (transparent - прозрачный цвет для обводки)
+    outline-offset: 2px
+    transition: outline-color var(--transition-duration), background-color var(--transition-duration)
+    cursor: pointer
+
+// -------> Кнопка-фокус <------- //
+.default-btn:focus-visible
+    outline-color: var(--base-color)
+
+// -------> Кнопка-ховер <------- //
+.default-btn:hover
+    background: var(--base-color-hover)
+
+// -------> Кнопка-актив <------- //
+.default-btn:active
+    background: var(--base-color-active)
+
+
+// ===================== 3 Компонент - ТЕКСТОВОЕ ПОЛЕ ================== //
+
+// -------> Текствое поле-дефолт <------- //
+
+.text-field
+    padding: 11px 16px 11px 16px
+    border-radius: 12px
+    border: 1px solid var(--border-color)
+    // background: #fff
+    transition: border-color var(--transition-duration)
+    outline: none
+    &::placeholder
+        color: var(--placeholder-color)
+
+// -------> Текствое поле-фокус <------- //
+
+.text-field:focus
+    border-color: var(--base-color)
+
+
+// ======================== 4 Компонент - ПОДЗАГОЛОВОК ================== //
+
+// -------> Подзаголовок-дефолт <------- //
+.subtitle
+    text-align: center
+    margin: 0
+    font-weight: 700
+    font-size: 34px 
+
+
+// ======================== 5 Компонент - ЛОГО ========================= //
+
+// -------> Лого-дефолт <------- //
+.logo
+    display: block
+    width: 154px
+    height: 16px
+
+// ======================== 6 Компонент - МЕНЮ ======================== //
+
+// -------> Меню-дефолт <------- //
+.menu
+    &__list
+        display: flex
+        align-items: center
+        gap: 50px
+        list-style: none
+        margin: 0
+        padding-left: 0
+    // -------> ссылка-дефолт <------- //
+    &__link
+        color: white
+        outline: none
+        transition: color var(--transition-duration), background-color var(--transition-duration)
+    // -------> ссылка-фокус <------- //
+    &__link:focus-visible
+        color: var(--black-color)
+        outline: none
+        background-color: var(--base-color)
+    // -------> ссылка-ховер <------- //
+    &__link:hover
+        color: var(--base-color-hover)
+        // text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
+    // -------> ссылка-актив <------- //
+    &__link:active
+        color: var(--base-color-active)
+
+
+// ======================== 7 Компонент - ФОРМА ОБРАТНОЙ СВЯЗИ ========== //
+
+// -------> ФОС-дефолт <------- //
+.callback-form
+    display: flex
+    gap: 16px
+
+.callback-form__inp
+    flex-basis: 288px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Настроим контйнер чтобы контент не выходил за его установленные границы, имел центрирование по сердине и внутренние отступы 
+.container
+    max-width: 780px
+    margin: 0 auto // центрирование контейнера
+    padding: 40px
+
+
+@media ( max-width: 740px ) 
+    
+    // ==================== 7 Компонент - ФОРМА ОБРАТНОЙ СВЯЗИ ========== //
+
+    // -------> ФОС-дефолт-MEDIA 740px <------- //
+    .callback-form
+        flex-direction: column
+        gap: 16px
+
+    .callback-form__inp
+        flex-basis: initial
+
+
