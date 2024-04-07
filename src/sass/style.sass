@@ -20,7 +20,7 @@
 *,
 ::after,
 ::before
-    box-sizing: inherit 
+    box-sizing: border-box 
 
 // Стилизуем контент внутри body в части текста
 body
@@ -209,7 +209,36 @@ a
         font-weight: 700
         font-size: 18px
     &__btn
-        // width: 100%
+        width: 100%
+
+// ================== 8(1) Компонент - КАРТОЧКА ТОВАРА-МОДИФИКАТОР ======== //
+
+// -------> Карточка товара-модификатор(1) <------- //
+.product-card_big
+    position: relative
+    overflow: hidden
+    border: none
+    height: 350px
+.product-card__img_big
+    height: 100%
+    border-radius: 12px
+    scale: 101%
+    // transition: scale var(--transition-duration), background-color var(--transition-duration)
+// .product-card__img_big:hover
+//     scale: 120%
+//     transition: scale var(--transition-duration), background-color var(--transition-duration)
+.product-card__body_big
+    position: absolute
+    align-items: flex-start
+    bottom: 0
+    width: 100%
+    background: rgba(0, 0, 0, 0.5)
+    border-radius: 12px
+    color: white
+.product-card__title_big
+    color: white
+.product-card__btn_big
+    width: initial
 
 
 
@@ -262,12 +291,10 @@ a
     margin: 0 auto // центрирование контейнера
     padding: 40px
 
-// ======================================================================== //
-
+// -------------------------- МЕДИАЗАПРОС 740 px -------------------------- //
 @media ( max-width: 740px ) 
     
     // ==================== 7 Компонент - ФОРМА ОБРАТНОЙ СВЯЗИ ========== //
-
     // -------> ФОС-дефолт-MEDIA 740px <------- //
     .callback-form
         flex-direction: column
@@ -277,3 +304,26 @@ a
         flex-basis: initial
 
 
+    // ==================== 8 Компонент - КАРТОЧКА ТОВАРА-ДЕФОЛТ ======== //
+    // -------> Карточка товара-дефолт <------- //
+    .product-card
+        &__img
+            height: 90px
+        &__body
+            padding: 10px
+        &__body-top
+            margin-bottom: 22px
+        &__title
+            font-size: 14px
+        &__price
+            font-weight: 700
+            font-size: 18px
+        &__btn
+            // width: 100%
+
+    // -------> Карточка товара-модификатор(1) <------- //
+    .product-card__img_big
+        height: 100%
+        border-radius: 12px
+    .product-card__btn_big
+        width: 100%

@@ -13,12 +13,23 @@
 
   <body>
     <div class="container">
+      <!-- 1 Компонент - ССЫЛКА -->
       <a href="" class="default-link">Ссылка</a>
+
+      <!-- 2 Компонент - КНОПКА (+ КНОПКА-ССЫЛКА) -->
       <button class="default-btn">Отправить</button>
       <a class="default-btn" href="#">Кнопка (ссылка)</a>
+
+      <!-- 3 Компонент - ТЕКСТОВОЕ ПОЛЕ -->
       <input class="text-field" type="text" placeholder="Подсказка" />
+
+      <!-- 4 Компонент - ПОДЗАГОЛОВОК -->
       <h2 class="subtitle">Подзаголовок</h2>
+
+      <!-- 5 Компонент - ЛОГО -->
       <img class="logo" src="/src/icons/logo.svg" width="154" alt="ВелоSHOP" />
+
+      <!-- 6 Компонент - МЕНЮ -->
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
@@ -35,6 +46,8 @@
           </li>
         </ul>
       </nav>
+
+      <!-- 7 Компонент - ФОРМА ОБРАТНОЙ СВЯЗИ -->
       <form action="" class="callback-form">
         <input
           class="text-field callback-form__inp"
@@ -46,14 +59,36 @@
           Отправить
         </button>
       </form>
+
+      <!-- 8 Компонент - КАРТОЧКА ТОВАРА-ДЕФОЛТ -->
       <article class="product-card">
-        <img src="/src/img/1.png" alt="Велосипед" class="product-card__img" />
+        <img class="product-card__img" src="/src/img/1.png" alt="Велосипед" />
         <div class="product-card__body">
           <div class="product-card__body-top">
             <h3 class="product-card__title">Велосипед BMX Tech Team Goof 20</h3>
             <strong class="product-card__price">12 830 руб</strong>
           </div>
           <button class="default-btn product-card__btn">Купить</button>
+        </div>
+      </article>
+
+      <!-- 8(1) Компонент - КАРТОЧКА ТОВАРА-МОДИФИКАТОР -->
+      <article class="product-card product-card_big">
+        <img
+          class="product-card__img product-card__img_big"
+          src="/src/img/product-big-1.png"
+          alt="Велосипед"
+        />
+        <div class="product-card__body product-card__body_big">
+          <div class="product-card__body-top">
+            <h3 class="product-card__title product-card__title_big">
+              Велосипед BMX Tech Team Goof 20
+            </h3>
+            <strong class="product-card__price">12 830 руб</strong>
+          </div>
+          <button class="default-btn product-card__btn product-card__btn_big">
+            Купить
+          </button>
         </div>
       </article>
     </div>
