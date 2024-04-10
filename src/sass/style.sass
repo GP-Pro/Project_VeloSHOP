@@ -2,6 +2,8 @@
 // ======================================================================== //
 // ------------------------------------------------------------------------ //
 
+// ----------------------- Стилизацтя БЭМ Элементов ----------------------- //
+
 // Создаем хранилище базовых цветов оформления через переменные
 :root
     --black-color: #263238
@@ -28,7 +30,7 @@ body
     font-family: Arial, Helvetica, sans-serif
     margin: 0
     color: var(--black-color)
-    background-color: grey
+    background-color: white
 
 // Стилизуем изображения
 img
@@ -243,6 +245,55 @@ a
 
 
 
+// ------------------------------------------------------------------------ //
+// ======================================================================== //
+// ------------------------------------------------------------------------ //
+
+// -------------------- Стилизацтя основной страницы ---------------------- //
+
+// Настроим КОНТЕЙНЕР чтобы контент не выходил за его установленные границы, имел центрирование по сердине и внутренние отступы 
+.container
+    max-width: 1200px
+    margin: 0 auto // центрирование контейнера
+    padding-left: 15px
+    padding-right: 15px
+
+// ===================== 1 Компонент страницы - HEADER ==================== //
+
+.header
+    background-color: var(--black-color)
+
+.header__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.header__logo
+    display: block
+    padding: 22px
+    background-color: var(--base-color)
+    transition: opacity var(--transition-duration), background-color var(--transition-duration)
+
+// -------> Header-logo настройка как для ссылки <------- //
+
+// -------> Header-logo ссылка-фокус <------- //
+.header__logo:focus-visible
+    outline: none
+    opacity: .8
+
+// -------> Header-logo ссылка-ховер <------- //
+.header__logo:hover
+    background-color: var(--base-color-hover)
+
+// -------> Header-logo ссылка-актив <------- //
+.header__logo:active
+    background-color: var(--base-color-active)
+
+
+
+
+
+
 
 
 
@@ -285,14 +336,10 @@ a
 // ======================================================================== //
 // ------------------------------------------------------------------------ //
 
-// Настроим контйнер чтобы контент не выходил за его установленные границы, имел центрирование по сердине и внутренние отступы 
-.container
-    max-width: 780px
-    margin: 0 auto // центрирование контейнера
-    padding: 40px
-
 // -------------------------- МЕДИАЗАПРОС 740 px -------------------------- //
 @media ( max-width: 740px ) 
+
+    // --------------------- Стилизацтя БЭМ Элементов --------------------- //
     
     // ==================== 7 Компонент - ФОРМА ОБРАТНОЙ СВЯЗИ ========== //
     // -------> ФОС-дефолт-MEDIA 740px <------- //
@@ -327,3 +374,23 @@ a
         border-radius: 12px
     .product-card__btn_big
         width: 100%
+
+    // ------------------ Стилизацтя основной страницы -------------------- //
+    
+    .header__container
+        display: block
+        justify-content: space-between
+        align-items: center
+        padding-right: 0px
+        padding-left: 0px
+    .header__logo
+        display: flex
+        justify-content: center
+    .header__menu
+        padding: 20px 0px
+        width: 100%
+        overflow-x: scroll
+    .header__menu-list
+        padding-right: 15px
+        padding-left: 15px
+        width: fit-content
