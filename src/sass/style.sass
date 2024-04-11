@@ -290,6 +290,43 @@ a
     background-color: var(--base-color-active)
 
 
+// ================= 2 Компонент страницы - SECTION HERO ================= //
+
+.hero__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 80px
+    padding-bottom: 80px
+    gap: 30px
+
+.hero__content
+    flex-basis: 490px
+
+.hero__title
+    font-weight: 700
+    font-size: 34px
+    color: var(--black-color)
+    padding-bottom: 20px
+
+.hero__desc
+    font-weight: 400
+    font-size: 20px
+    color: var(--black-color)
+    padding-bottom: 48px
+    max-width: 360px
+
+.hero__container::after
+    content: ""
+    display: block
+    flex-basis: 490px
+    height: 375px
+    background-image: url(../img/right-img-hero.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+
 
 
 
@@ -333,15 +370,15 @@ a
 
 
 // ------------------------------------------------------------------------ //
-// ======================================================================== //
+// ========================== МЕДИАЗАПРОС 740 px ========================== //
 // ------------------------------------------------------------------------ //
 
-// -------------------------- МЕДИАЗАПРОС 740 px -------------------------- //
 @media ( max-width: 740px ) 
 
     // --------------------- Стилизацтя БЭМ Элементов --------------------- //
     
     // ==================== 7 Компонент - ФОРМА ОБРАТНОЙ СВЯЗИ ========== //
+    
     // -------> ФОС-дефолт-MEDIA 740px <------- //
     .callback-form
         flex-direction: column
@@ -352,6 +389,7 @@ a
 
 
     // ==================== 8 Компонент - КАРТОЧКА ТОВАРА-ДЕФОЛТ ======== //
+    
     // -------> Карточка товара-дефолт <------- //
     .product-card
         &__img
@@ -375,8 +413,9 @@ a
     .product-card__btn_big
         width: 100%
 
-    // ------------------ Стилизацтя основной страницы -------------------- //
+    // ------------------ Стилизация основной страницы -------------------- //
     
+    // ================== 1 Компонент страницы - HEADER ================= //
     .header__container
         display: block
         justify-content: space-between
@@ -394,3 +433,13 @@ a
         padding-right: 15px
         padding-left: 15px
         width: fit-content
+
+    // =============== 2 Компонент страницы - SECTION HERO =============== //
+    
+    .hero__container
+        padding-top: 40px
+        padding-bottom: 40px
+    .hero__container::after
+        display: none
+    .hero__title
+        font-size: 28px
