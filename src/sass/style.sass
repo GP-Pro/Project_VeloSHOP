@@ -182,6 +182,7 @@ a
 .product-card
     display: flex
     flex-direction: column
+    overflow: hidden
     background-color: white
     border-radius: 12px
     border: 1px solid var(--border-color)
@@ -190,9 +191,13 @@ a
         flex-shrink: 0
         height: 180px
         width: 100%
-        object-fit: cover
+        object-fit: contain
         border-top-right-radius: 12px
         border-top-left-radius: 12px
+        transition: scale var(--transition-duration), background-color var(--transition-duration)
+    &__img:hover
+        scale: 120%
+        transition: scale var(--transition-duration), background-color var(--transition-duration)
     &__body
         display: flex
         flex-direction: column
@@ -225,10 +230,11 @@ a
     height: 100%
     border-radius: 12px
     scale: 101%
-    // transition: scale var(--transition-duration), background-color var(--transition-duration)
-// .product-card__img_big:hover
-//     scale: 120%
-//     transition: scale var(--transition-duration), background-color var(--transition-duration)
+    object-fit: cover
+    transition: scale var(--transition-duration), background-color var(--transition-duration)
+.product-card__img_big:hover
+    scale: 120%
+    transition: scale var(--transition-duration), background-color var(--transition-duration)
 .product-card__body_big
     position: absolute
     align-items: flex-start
@@ -364,6 +370,38 @@ a
     margin-bottom: 26px
 
 
+// ========================= 3 СЕКЦИЯ - CATALOG ========================== //
+.catalog
+    padding: 80px 0px
+
+.catalog__subtitle
+    margin-bottom: 60px
+
+.catalog__list
+    list-style-type: none
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 30px
+
+.catalog__item_big
+    grid-column: span 2
+
+.catalog__card
+    height: 100%
+
+
+// ========================= 4 СЕКЦИЯ - FOOTER ========================== //
+
+.footer
+    display: flex
+    justify-content: center
+    padding: 23px 15px
+    background-color: var(--border-color)
+
+.footer__logo
+    opacity: 50%
+
+
 
 
 
@@ -408,7 +446,7 @@ a
 // ========================== МЕДИАЗАПРОС 740 px ========================== //
 // ------------------------------------------------------------------------ //
 
-@media ( max-width: 740px ) 
+@media ( max-width: 835px ) 
 
     // --------------------- Стилизацтя БЭМ Элементов --------------------- //
     
@@ -448,9 +486,9 @@ a
     .product-card__btn_big
         width: 100%
 
-    // ------------------ Стилизация основной страницы -------------------- //
+    // ------------------ СТИЛИЗАЦИЯ ОСНОВНОЙ СТРАНИЦЫ -------------------- //
     
-    // ================== 1 Компонент страницы - HEADER ================= //
+    // ========================= 0 СЕКЦИЯ - HEADER ======================== //
     .header__container
         display: block
         justify-content: space-between
@@ -469,8 +507,7 @@ a
         padding-left: 15px
         width: fit-content
 
-    // =============== 2 Компонент страницы - SECTION HERO =============== //
-    
+    // ========================= 1 СЕКЦИЯ - HERO ========================== //
     .hero__container
         padding-top: 40px
         padding-bottom: 40px
@@ -478,3 +515,25 @@ a
         display: none
     .hero__title
         font-size: 28px
+
+    // ======================= 2 СЕКЦИЯ - CALLBACK ======================== //
+    .callback
+        display: block
+
+    .callback__right
+        padding-left: 15px
+        padding-right: 15px
+
+    .callback::before
+        display: none
+
+    // ======================= 3 СЕКЦИЯ - CATALOG ========================= //
+    .catalog
+        padding: 40px 0px
+
+    .catalog__subtitle
+        margin-bottom: 30px
+
+    .catalog__list
+        grid-template-columns: repeat(2, 1fr)
+        gap: 10px

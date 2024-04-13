@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body>
+    <!----------------------- 0 СЕКЦИЯ - HEADER ----------------------->
     <header class="header">
       <div class="container header__container">
         <a href="#" class="header__logo">
@@ -40,6 +41,7 @@
       </div>
     </header>
     <main>
+      <!----------------------- 1 СЕКЦИЯ - HERO ----------------------->
       <section class="hero">
         <div class="container hero__container">
           <div class="hero__content">
@@ -54,6 +56,7 @@
           </div>
         </div>
       </section>
+      <!----------------------- 2 СЕКЦИЯ - CALLBACK ----------------------->
       <section class="callback">
         <div class="callback__right">
           <h2 class="callback__title">Обратная связь</h2>
@@ -73,6 +76,145 @@
           </form>
         </div>
       </section>
+      <!----------------------- 3 СЕКЦИЯ - CATALOG ----------------------->
+      <section class="catalog">
+        <div class="container catalog__container">
+          <h2 class="subtitle catalog__subtitle">Каталог</h2>
+          <ul class="catalog__list">
+            <!------------ 1 Карточка ------------>
+            <li class="catalog__item">
+              <article class="product-card catalog__card">
+                <img
+                  class="product-card__img"
+                  src="/src/img/1.png"
+                  alt="Велосипед"
+                />
+                <div class="product-card__body">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      Велосипед BMX Tech Team Goof 20
+                    </h3>
+                    <strong class="product-card__price">12 830 руб</strong>
+                  </div>
+                  <button class="default-btn product-card__btn">Купить</button>
+                </div>
+              </article>
+            </li>
+            <!------------ 2 Карточка ------------>
+            <li class="catalog__item">
+              <article class="product-card catalog__card">
+                <img
+                  class="product-card__img"
+                  src="/src/img/2.png"
+                  alt="Велосипед"
+                />
+                <div class="product-card__body">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      Горный велосипед 29" TRINX
+                    </h3>
+                    <strong class="product-card__price">20 499 руб</strong>
+                  </div>
+                  <button class="default-btn product-card__btn">Купить</button>
+                </div>
+              </article>
+            </li>
+            <!------------ 3 Карточка (big) ------------>
+            <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img
+                  class="product-card__img product-card__img_big"
+                  src="/src/img/product-big-1.png"
+                  alt="Велосипед"
+                />
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title product-card__title_big">
+                      Горный велосипед 29" TRINX VeloPro X1
+                    </h3>
+                    <strong class="product-card__price">35 999 руб</strong>
+                  </div>
+                  <button
+                    class="default-btn product-card__btn product-card__btn_big"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </article>
+            </li>
+            <!------------ 4 Карточка (big) ------------>
+            <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img
+                  class="product-card__img product-card__img_big"
+                  src="/src/img/product-big-2.png"
+                  alt="Велосипед"
+                />
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title product-card__title_big">
+                      Велосипед городской 27" City Drive 101
+                    </h3>
+                    <strong class="product-card__price">15 599 руб</strong>
+                  </div>
+                  <button
+                    class="default-btn product-card__btn product-card__btn_big"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </article>
+            </li>
+            <!------------ 5 Карточка ------------>
+            <li class="catalog__item">
+              <article class="product-card catalog__card">
+                <img
+                  class="product-card__img"
+                  src="/src/img/3.jpg"
+                  alt="Велосипед"
+                />
+                <div class="product-card__body">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      Шлем велосипедный VSH 25 full lime
+                    </h3>
+                    <strong class="product-card__price">1244 руб</strong>
+                  </div>
+                  <button class="default-btn product-card__btn">Купить</button>
+                </div>
+              </article>
+            </li>
+            <!------------ 6 Карточка ------------>
+            <li class="catalog__item">
+              <article class="product-card catalog__card">
+                <img
+                  class="product-card__img"
+                  src="/src/img/4.png"
+                  alt="Велосипед"
+                />
+                <div class="product-card__body">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      Велосипед RUSH HOUR XS 925
+                    </h3>
+                    <strong class="product-card__price">22 830 руб</strong>
+                  </div>
+                  <button class="default-btn product-card__btn">Купить</button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <!----------------------- 4 СЕКЦИЯ - FOOTER ----------------------->
+    <footer class="footer">
+      <img
+        class="logo footer__logo"
+        src="/src/icons/logo.svg"
+        width="154"
+        alt="ВелоSHOP"
+      />
+    </footer>
   </body>
 </html>
